@@ -1,0 +1,11 @@
+<template>
+  <div class="relative">
+    <div class="pt-12 min-h-screen">
+      <slot />
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+
+</script>

@@ -1,0 +1,27 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontSize": 12,
+  "editor.minimap.autohide": false,
+  "editor.minimap.enabled": true,
+  "editor.minimap.showRegionSectionHeaders": false,
+  "editor.minimap.showMarkSectionHeaders": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false,
+  "css.customData": [".vscode/tailwind.json"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "scss.lint.unknownAtRules": "ignore",
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}
