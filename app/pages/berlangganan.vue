@@ -3,7 +3,7 @@ import type { Subscription } from '~/types/packages'
 
 const { data: subscription, status } = await useAsyncData<Subscription>(
   'subscription',
-  () => $fetch<Subscription>('/json/subscription.json')
+  () => $fetch<Subscription>('https://cdn-supportsite.kompas.id/halaman-berlangganan/subscription.json')
 )
 
 const items = [

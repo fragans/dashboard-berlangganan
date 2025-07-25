@@ -5,6 +5,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/ui'],
   routeRules: {
-    '/json/**': { proxy: 'http://localhost:3000/**' }
+    '/json/**': { proxy: `http://localhost:3000/**` }
   }
 })
