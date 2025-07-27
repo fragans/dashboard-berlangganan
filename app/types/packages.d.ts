@@ -1,11 +1,12 @@
 import type { Kdp } from './kdp'
+import type { KdpPartner } from './KdpPartner'
 
 export interface Subscription {
   packages: {
     [key: string]: Package;
   };
   kdp: Kdp;
-  kdpPartner: Record<string, unknown>[];
+  kdpPartner: KdpPartner[];
   partner: Record<string, unknown>;
   promotions: Record<string, unknown>;
   swg: Record<string, unknown>;

@@ -3,7 +3,7 @@ import type { Subscription } from '~/types/packages'
 
 const { data: subscription, status } = await useAsyncData<Subscription>(
   'subscription',
-  () => $fetch<Subscription>('https://cdn-supportsite.kompas.id/halaman-berlangganan/subscription.json')
+  () => $fetch<Subscription>('/json/subscription.json')
 )
 
 const items = [
@@ -38,27 +38,10 @@ const items = [
           <CardKdp :kdp="subscription.kdp" />
         </template>
       </template>
-      <template #kdpPartner="{ item }">
-        <UCard>
-          <template #header>
-            <h2 class="text-xl font-semibold">
-              {{ item.label }}
-            </h2>
-          </template>
-          <div v-if="subscription && subscription.kdpPartner" class="space-y-4">
-            <div v-for="(partner, index) in subscription.kdpPartner" :key="index">
-              <h3 class="text-lg font-medium">
-                Partner {{ index + 1 }}
-              </h3>
-              <pre>{{ partner }}</pre>
-            </div>
-          </div>
-          <template #footer>
-            <UButton color="primary">
-              Save Changes
-            </UButton>
-          </template>
-        </UCard>
+      <template #kdpPartner>
+        <template v-if="subscription?.kdpPartner">
+          <CardKdpPartner :kdp-partner="subscription.kdpPartner" />
+        </template>
       </template>
     </UTabs>
   </div>
