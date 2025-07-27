@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const props = defineProps<{ kdp: Kdp }>()
+const props = defineProps<{ data: Kdp }>()
 </script>
 
 <template>
   <UCard>
-    <div v-if="props.kdp" class="flex flex-col gap-8">
-      <UCard v-for="(item, key) in props.kdp" :key="key">
+    <div v-if="props.data" class="flex flex-col gap-8">
+      <UCard v-for="(item, key) in props.data" :key="key">
         <template #header>
           <h3 class="text-lg text-center font-medium capitalize">
             {{ key }}

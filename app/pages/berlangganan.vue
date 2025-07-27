@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Subscription } from '~/types/packages'
-
 const { data: subscription, status } = await useAsyncData<Subscription>(
   'subscription',
   () => $fetch<Subscription>('/json/subscription.json')
